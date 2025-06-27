@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Challonge Bracket</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <h1>AIS 1v1 Tournament</h1>
 
-  <iframe 
-    src="https://challonge.com/6jg455et/module" 
-    width="100%" 
-    height="500" 
-    frameborder="0" 
-    scrolling="auto" 
-    allowtransparency="true">
-  </iframe>
+  <div class="dropdown" id="bracketDropdown">
+    <button onclick="toggleDropdown()">AIS 1v1 Tournament</button>
+    <div class="dropdown-content">
+      <iframe 
+        src="https://challonge.com/6jg455et/module" 
+        allowtransparency="true" 
+        scrolling="auto">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('bracketDropdown');
+      dropdown.classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>
